@@ -1,0 +1,37 @@
+package com.loan.testcases;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class HomeLoan {
+
+	@BeforeTest
+	public void beforetest() {
+		System.out.println("Before Test");
+	}
+	
+	@AfterTest
+	public void aftertest() {
+		System.out.println("After Test");		
+	}
+	
+	@Test(groups={"Smoke"})
+	public void webpagehomeloan() {
+		System.out.println("WebPage Home Loan");
+		
+	}
+	
+	@Test
+	public void mobilepagehomeloan() {
+		System.out.println("MobilePage Home Loan");
+	}
+	
+	@Test
+	public void apihomeloan() {
+		System.out.println("API Page Home Loan");
+	}
+
+
+
+}

@@ -1,0 +1,17 @@
+package com.zoho.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class SampleTestCase {
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.edge.driver", "D:\\edgedriver_win64\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+		driver.get("https://www.zoho.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
+		
+	}
+
+}

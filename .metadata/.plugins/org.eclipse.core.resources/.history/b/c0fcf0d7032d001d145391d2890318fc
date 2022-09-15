@@ -1,0 +1,13 @@
+package com.saucedemo.pages;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelPage {
+
+	FileInputStream fis = new FileInputStream ("D:\\Training Workspace\\New folder\\Another Folder\\ExamTestCase.xlsx");
+	XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	
+	
+}

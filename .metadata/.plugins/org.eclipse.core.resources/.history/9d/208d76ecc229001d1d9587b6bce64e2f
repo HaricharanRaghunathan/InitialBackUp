@@ -1,0 +1,14 @@
+package com.attra.TestSelenium;
+
+public class SeleniumDemo1 {
+
+	public static void main(String[] args) {
+	
+		System.setProperty("webdriver.edge.driver", "D:\\edgedriver_win64\\msedgedriver.exe");
+	
+		
+		
+		
+		
+	}
+}

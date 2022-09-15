@@ -1,0 +1,37 @@
+package com.loan.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class EducationalLoan {
+
+	@BeforeMethod
+	public void beforemethod() {
+		System.out.println("Before Method");
+	}
+	
+	@AfterMethod
+	public void aftermethod() {
+		System.out.println("After Method");
+	}
+	
+	@Test(groups={"Smoke"}, enabled = false,  timeOut = 4000) // Here timeOut means that in case of any error present in this method, the IDE will wait for 4 seconds specifically rather than following the natural protocol of implicitly waiting for 2 seconds..
+	public void webpageeducationalloan() {
+		System.out.println("WebPage Educational Loan");
+		
+	}
+	
+	@Test
+	public void mobilepageeducationalloan() {
+		System.out.println("MobilePage Educational Loan");
+	}
+	
+	@Test(dependsOnMethods = "mobilepageeducationalloan")
+	public void apieducationalloan() {
+		System.out.println("API Page Educational Loan");
+	}
+
+
+
+}

@@ -1,0 +1,9 @@
+package com.zoho.pages;
+
+public class HomePage {
+
+	public HomePage() {
+		
+	}
+	
+}

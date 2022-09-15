@@ -1,0 +1,57 @@
+package com.saucedemo.pages;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Iterator;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelPage {
+
+	public void getDataLogin() throws IOException {
+
+		FileInputStream fis = new FileInputStream(
+				"D:\\Training Workspace\\New folder\\Another Folder\\ExamTestCase.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+		int sheets = workbook.getNumberOfSheets();
+
+		for (int i = 0; i < sheets; i++) {
+			if (workbook.getSheetAt(i).getSheetName().equalsIgnoreCase("HomePage")) {
+				XSSFSheet sheet = workbook.getSheetAt(i);
+				Iterator<Row> rows = sheet.rowIterator();
+				Row row = rows.next();
+				Iterator<Cell> cell = row.cellIterator();
+
+				int k = 0;
+				int column = 0;
+
+				while (cell.hasNext()) {
+					if (cell.next().getStringCellValue().equalsIgnoreCase("TestCases")) {
+						column = k;
+					}
+					k++;
+				}
+
+				while (rows.hasNext()) {
+					Row r = rows.next();
+					if (r.getCell(column).getStringCellValue().equalsIgnoreCase("LoginPage")) {
+
+						Iterator<Cell> ce = r.cellIterator();
+
+						while (ce.hasNext()) {
+
+							System.out.println(ce.next().getStringCellValue());
+						}
+					}
+				}
+
+			}
+
+		}
+	}
+}

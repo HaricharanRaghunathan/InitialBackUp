@@ -1,0 +1,34 @@
+package com.loan.testcases;
+
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class Listener implements ITestListener {
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		ITestListener.super.onTestStart(result);
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		ITestListener.super.onTestSuccess(result);
+		System.out.println("Sucess : "+result.getName());
+	}
+	
+	@Override
+	public void onTestfailure(ITestResult result) {
+		ITestListener.super.onTestFailure(result);
+	}
+	
+	@Override
+	public void onTestSkipped(ITestResult result){
+		ITestListener.super.onTestSkipped(result);
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+	}
+
+}

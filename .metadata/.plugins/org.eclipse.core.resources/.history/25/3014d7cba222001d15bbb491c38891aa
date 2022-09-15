@@ -1,0 +1,7 @@
+package Apartment;
+
+public class SearchApartment {
+
+	Apartment a1 = new Apartment (int 3; int 1500; double 17000.00; String "full");
+	a1.display();
+}

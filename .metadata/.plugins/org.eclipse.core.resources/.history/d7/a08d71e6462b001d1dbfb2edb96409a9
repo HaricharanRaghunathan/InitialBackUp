@@ -1,0 +1,47 @@
+package com.loan.testcases;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class PersonalLoan {
+
+	public void beforesuite() {
+		System.out.println("First execution before anything");
+	}
+	
+	public void aftersuite() {
+		System.out.println("Last execution after anything");
+	}
+	
+	
+	@BeforeTest
+	public void beforetest() {
+		System.out.println("Before Test");
+	}
+	
+	@AfterTest
+	public void aftertest() {
+		System.out.println("After Test");		
+	}
+	
+	
+	@Test
+	public void webpagepersonalloan() {
+		System.out.println("WebPage Personal Loan");
+		
+	}
+	
+	@Test
+	public void mobilepagepersonalloan() {
+		System.out.println("MobilePage Personal Loan");
+	}
+	
+	@Test
+	public void apipersonalloan() {
+		System.out.println("API Page Personal Loan");
+	}
+
+
+
+}
